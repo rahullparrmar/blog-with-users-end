@@ -83,6 +83,7 @@ def get_all_posts():
 
 
 @app.route('/register', methods=["GET", "POST"])
+@csrf.exempt
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
