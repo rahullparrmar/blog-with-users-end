@@ -25,6 +25,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 csrf = CSRFProtect()
 csrf.init_app(app)
+WTF_CSRF_CHECK_DEFAULT = False
 
 
 @login_manager.user_loader
