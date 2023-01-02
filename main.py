@@ -85,7 +85,6 @@ def get_all_posts():
 @app.route('/register', methods=["GET", "POST"])
 def register():
     form = RegisterForm()
-    csrf.generate_csrf()
     if form.validate_on_submit():
 
         if User.query.filter_by(email=form.email.data).first():
